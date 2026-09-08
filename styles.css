@@ -260,32 +260,6 @@ section.tight { padding-block: var(--spacing-64); }
   color: var(--color-muted);
 }
 
-/* --- Steps -------------------------------------------------------------- */
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-24);
-}
-.step {
-  background: var(--color-fog);
-  border-radius: var(--radius);
-  padding: var(--card-padding);
-}
-.step-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  background: var(--color-ember-orange);
-  color: #fff;
-  font-weight: 800;
-  font-size: var(--text-body-sm);
-  margin-bottom: var(--spacing-24);
-}
-.step h3 { font-size: var(--text-heading-sm); margin-bottom: 10px; }
-.step p { margin: 0; font-size: var(--text-body-sm); color: var(--color-muted); line-height: 1.6; }
 
 /* --- Feature rows ------------------------------------------------------- */
 
@@ -722,3 +696,297 @@ section.tight { padding-block: var(--spacing-64); }
 @media (max-width: 860px) {
   .setup-row { grid-template-columns: 1fr; }
 }
+
+/* --- Problem: how it goes now vs with the app --------------------------- */
+
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-32);
+  align-items: start;
+}
+
+.compare-col {
+  border-radius: var(--radius);
+  padding: var(--spacing-40) var(--card-padding);
+}
+.compare-col h3 {
+  font-size: var(--text-heading-sm);
+  margin-bottom: var(--spacing-24);
+}
+.compare-col ul { list-style: none; margin: 0; padding: 0; }
+.compare-col li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 13px 0;
+  font-size: var(--text-body-sm);
+  line-height: 1.55;
+}
+.compare-col li + li { border-top: 1px solid var(--color-hairline); }
+
+.compare-col.is-before {
+  background: var(--color-fog);
+  color: var(--color-muted);
+}
+.compare-col.is-before h3 { color: var(--color-graphite); }
+.compare-col.is-before li + li { border-top-color: #e2e2e2; }
+
+.compare-col.is-after {
+  background: var(--color-paper-white);
+  border: 2px solid var(--color-ember-orange);
+  padding: calc(var(--spacing-40) - 2px) calc(var(--card-padding) - 2px);
+}
+
+/* the ✕ / ✓ marks, drawn rather than typed so no emoji font is involved */
+.mark {
+  flex: none;
+  position: relative;
+  width: 21px; height: 21px;
+  margin-top: 2px;
+  border-radius: 50%;
+}
+.mark-no { background: #dcdcdc; }
+.mark-no::before, .mark-no::after {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 10px; height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+.mark-no::before { transform: translate(-50%, -50%) rotate(45deg); }
+.mark-no::after  { transform: translate(-50%, -50%) rotate(-45deg); }
+
+.mark-yes { background: var(--color-verdant-green); }
+.mark-yes::before {
+  content: "";
+  position: absolute;
+  left: 6px; top: 5px;
+  width: 5px; height: 9px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(42deg);
+}
+
+/* --- The flow: recipe -> plan -> list -> shop --------------------------- */
+
+.flow-band { background: var(--color-fog); }
+
+.flow {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-24);
+  counter-reset: flow;
+}
+
+.flow-node {
+  position: relative;
+  text-align: center;
+  padding-inline: 6px;
+}
+
+/* the connector line between one node and the next */
+.flow-node::after {
+  content: "";
+  position: absolute;
+  top: 33px;
+  left: calc(50% + 44px);
+  right: calc(-50% + 44px);
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right, var(--color-ember-orange) 0 7px, transparent 7px 14px);
+  opacity: .5;
+}
+.flow-node:last-child::after { content: none; }
+
+.flow-dot {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px; height: 66px;
+  margin-bottom: var(--spacing-24);
+  border-radius: 50%;
+  background: var(--color-paper-white);
+  border: 2px solid var(--color-ember-orange);
+  color: var(--color-ember-orange);
+  counter-increment: flow;
+}
+.flow-dot svg { width: 28px; height: 28px; }
+.flow-dot::after {
+  content: counter(flow);
+  position: absolute;
+  right: -3px; bottom: -3px;
+  width: 24px; height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-ember-orange);
+  color: #fff;
+  font-size: var(--text-tiny);
+  font-weight: 800;
+}
+
+.flow-node h3 { font-size: var(--text-subheading); line-height: 1.3; margin-bottom: 10px; }
+.flow-node p {
+  margin: 0;
+  font-size: var(--text-body-sm);
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+@media (max-width: 980px) {
+  .flow { grid-template-columns: repeat(2, 1fr); row-gap: var(--spacing-48); }
+  .flow-node:nth-child(2)::after { content: none; }
+}
+
+@media (max-width: 860px) {
+  .compare { grid-template-columns: 1fr; gap: var(--spacing-24); }
+}
+
+@media (max-width: 620px) {
+  .flow { grid-template-columns: 1fr; row-gap: var(--spacing-40); }
+  .flow-node::after { content: none; }
+}
+
+/* --- MCP: the call trace ------------------------------------------------ */
+
+.mcp-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: var(--spacing-48);
+  align-items: start;
+}
+
+.trace {
+  border-radius: var(--radius);
+  background: var(--color-graphite);
+  color: #fff;
+  padding: var(--spacing-32);
+  overflow: hidden;
+}
+.trace-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+.trace-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--color-verdant-green);
+}
+.trace-title {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: var(--text-tiny);
+  letter-spacing: .04em;
+  color: rgba(255,255,255,.62);
+}
+
+.trace-ask {
+  margin: 20px 0 18px;
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  color: #ffb894;
+}
+
+.trace-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: trace;
+}
+.trace-list li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 9px 0 9px 30px;
+  counter-increment: trace;
+}
+.trace-list li::before {
+  content: counter(trace);
+  position: absolute;
+  left: 0; top: 11px;
+  width: 19px; height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.65);
+  font-size: 10px;
+  font-weight: 700;
+}
+/* the thread running down the call sequence */
+.trace-list li::after {
+  content: "";
+  position: absolute;
+  left: 9px; top: 30px; bottom: -9px;
+  width: 1px;
+  background: rgba(255,255,255,.14);
+}
+.trace-list li:last-child::after { content: none; }
+
+.trace-list code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: var(--text-caption);
+  color: #ffd0b8;
+  word-break: break-word;
+}
+.trace-list span {
+  font-size: var(--text-tiny);
+  line-height: 1.5;
+  color: rgba(255,255,255,.58);
+}
+
+.trace-done {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin: 20px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.14);
+  font-size: var(--text-caption);
+  line-height: 1.55;
+  color: rgba(255,255,255,.82);
+}
+
+.mcp-copy > h3 { font-size: var(--text-heading-sm); margin-bottom: var(--spacing-24); }
+.inline-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  background: var(--color-fog);
+  border-radius: 6px;
+  padding: 1px 6px;
+}
+
+.mcp-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-24);
+  margin-top: var(--spacing-32);
+  padding-top: var(--spacing-32);
+  border-top: 1px solid var(--color-hairline);
+}
+.mcp-stats div { display: flex; flex-direction: column; gap: 4px; }
+.mcp-stats b {
+  font-size: var(--text-heading);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-ember-orange);
+}
+.mcp-stats span { font-size: var(--text-caption); line-height: 1.45; color: var(--color-muted); }
+
+@media (max-width: 980px) {
+  .mcp-grid { grid-template-columns: 1fr; gap: var(--spacing-40); }
+}
+
+.inline-code { white-space: nowrap; }

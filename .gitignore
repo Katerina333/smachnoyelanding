@@ -1,3 +1,9 @@
 .DS_Store
 .shots-cache/
 node_modules/
+tools/node_modules/
+tools/package*.json
+tools/final/
+tools/landing/
+tools/out/
+tools/.chrome-profile/

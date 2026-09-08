@@ -1,0 +1,13 @@
+# Смачно Є — hackathon demo landing page. Intentionally kept out of search.
+#
+# The de-indexing is done by <meta name="robots" content="noindex, nofollow">
+# in index.html. Crawling is deliberately LEFT OPEN here: a "Disallow: /" would
+# stop Googlebot from fetching the page, and it would therefore never read the
+# noindex directive — the URL could still surface in results without a snippet.
+#
+# Do not add a Disallow rule unless you also remove the noindex meta tag.
+
+User-agent: *
+Allow: /
+
+# No sitemap is published on purpose.

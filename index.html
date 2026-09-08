@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ==========================================================================
+     Kept out of search on purpose: this page exists only to demo the project
+     for the Silpo AI Factory hackathon. See robots.txt before changing this.
+     ========================================================================== -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="bingbot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+
+<title>СмачноЄ — рецепти звідусіль, план на тиждень, кошик Сільпо</title>
+<meta name="description" content="Демо-сторінка проєкту СмачноЄ для хакатону Silpo AI Factory. Не для індексації.">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="ribbon">
+  <b>Демо</b> — сторінка проєкту для хакатону Silpo AI&nbsp;Factory. Не для публічного пошуку.
+  
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <img src="assets/favicon.svg" alt="">
+      <span>СмачноЄ</span>
+    </a>
+
+    <nav class="site-nav">
+      <a href="#how">Як це працює</a>
+      <a href="#paper">З паперу</a>
+      <a href="#video">З відео</a>
+      <a href="#plan">План і список</a>
+      <a href="#limits">Чесні межі</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-filled" href="https://t.me/SmachnoYe_bot" target="_blank" rel="noopener noreferrer">
+        <span class="btn-long">Відкрити в </span>Telegram
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="display">
+        <span class="accent-green">Зберігайте рецепти</span> звідусіль — і готуйте з них
+        
+      </h1>
+
+      <p class="lede">
+        Посилання, TikTok, YouTube, Instagram, фото сторінки з книги чи рукописного зошита, голосове — надішліть це боту, і воно стане структурованим рецептом у вашій колекції.
+        
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-filled btn-lg" href="https://t.me/SmachnoYe_bot" target="_blank" rel="noopener noreferrer">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13.8l-4.8-1.5c-1-.3-1.1-1 .2-1.5l18.9-7.3c.9-.3 1.6.2 1.4 1.3Z"/></svg>
+          Спробувати @SmachnoYe_bot
+        </a>
+        <a class="btn btn-ghost btn-lg" href="https://smachnoyesilpo-production.up.railway.app" target="_blank" rel="noopener noreferrer">
+          Відкрити застосунок
+        </a>
+      </div>
+
+      <p class="hero-note">
+        Telegram Mini App · українською · працює на Silpo MCP
+        
+      </p>
+    </div>
+
+    <div class="phone-fan">
+      <div class="phone"><div class="phone-screen"><img src="assets/screens/folders.jpg" alt="Папки з рецептами у застосунку СмачноЄ" width="780" height="1688" loading="eager"></div></div>
+      <div class="phone"><div class="phone-screen"><img src="assets/screens/recipe.jpg" alt="Картка рецепту «Червоний борщ», збереженого з TikTok" width="780" height="1688" loading="eager"></div></div>
+      <div class="phone"><div class="phone-screen"><img src="assets/screens/library.jpg" alt="Колекція рецептів" width="780" height="1688" loading="eager"></div></div>
+      <div class="phone"><div class="phone-screen"><img src="assets/screens/plan.jpg" alt="План харчування на тиждень" width="780" height="1688" loading="eager"></div></div>
+      <div class="phone"><div class="phone-screen"><img src="assets/screens/list.jpg" alt="Список продуктів, згрупований за відділами магазину" width="780" height="1688" loading="eager"></div></div>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section id="how" class="tight">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Три кроки</p>
+        <h2 class="heading">
+          <span class="accent-orange">Надішліть повідомлення</span> — далі працює агент
+          
+        </h2>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Надсилаєте</h3>
+          <p>
+            Пересилаєте боту будь-що: посилання на сайт, відео з TikTok чи YouTube, пост з Instagram, фото сторінки з кулінарної книги, голосове або просто текст.
+            
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Отримуєте рецепт</h3>
+          <p>
+            Інгредієнти з вагою, кроки, калорійність на порцію і стільки порцій, скільки вам треба. Одне відео з кількома стравами стає кількома окремими рецептами в одній папці.
+            
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Купуєте</h3>
+          <p>
+            Кілька рецептів згортаються в один список продуктів за відділами магазину. Візьміть його з собою — або дозвольте агенту наповнити кошик Сільпо онлайн.
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section>
+    <div class="wrap">
+
+      <!-- Benefit 1 -->
+      <div class="feature" id="save">
+        <div class="feature-copy">
+          <p class="eyebrow">Можливість 01</p>
+          <h2 class="heading">
+            <span class="accent-orange">Зберігайте рецепти</span> звідусіль — одним повідомленням
+            
+          </h2>
+          <p>
+            Ваші власні рецепти, рецепти з паперового зошита бабусі, з відео, яке ви щойно подивилися, — усе в одному місці й в одному охайному вигляді. Нічого не треба переписувати руками.
+            
+          </p>
+
+          <div class="tag-row">
+            <span class="tag">Посилання</span>
+            <span class="tag">Фото сторінки</span>
+            <span class="tag">Рукописний рецепт</span>
+            <span class="tag">YouTube</span>
+            <span class="tag">TikTok</span>
+            <span class="tag">Instagram</span>
+            <span class="tag">Голосове</span>
+            <span class="tag">Текст</span>
+          </div>
+
+          <ul class="checklist">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Інгредієнти з кількістю, кроки та калорійність на порцію — з підписаним джерелом цифр.
+              
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Якщо в одному відео чи пості кілька страв — кожна стає окремим рецептом, а всі разом лягають в одну папку.
+              
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Папки, пошук і фільтри за типом страви, кухнею та дієтою — колекція залишається вашою.
+              
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Новий сайт агент вчиться читати один раз — правило зберігається, і наступне посилання звідти безкоштовне.
+              
+            </li>
+          </ul>
+        </div>
+
+        <div class="feature-media pair">
+          <div class="phone phone-sm"><div class="phone-screen"><img src="assets/screens/batch.jpg" alt="Збережене відео «Заготовки в морозилку» — чотири страви, розкладені на окремі рецепти" width="780" height="1688" loading="lazy"></div></div>
+          <div class="phone"><div class="phone-screen"><img src="assets/screens/folders.jpg" alt="Папки з рецептами" width="780" height="1688" loading="lazy"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PAPER  ->  RECIPE CARD ================= -->
+  <section class="tight" id="paper">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Зі шпаргалки бабусі</p>
+        <h2 class="heading">
+          <span class="accent-orange">Сфотографуйте рукописний рецепт</span> — і він стане карткою
+          
+        </h2>
+        <p class="lede">
+          Найцінніші рецепти живуть у зошитах, а не в інтернеті. Надішліть фото сторінки — розпізнавання прочитає почерк, розкладе інгредієнти з вагою й покроковий опис і збереже все у вашу книгу рецептів.
+          
+        </p>
+      </div>
+
+      <div class="paper-flow">
+        <div class="flow-side">
+          <span class="flow-label"><svg class="flow-icon" width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M2.5 6.2 10 11l7.5-4.8M3.5 4h13a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 16.5 16h-13A1.5 1.5 0 0 1 2 14.5v-9A1.5 1.5 0 0 1 3.5 4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> Що ви надсилаєте</span>
+          <figure class="paper-photo" style="margin:0">
+            <img src="assets/handwritten-recipe.jpg" alt="Фото сторінки з рукописного кулінарного зошита: рецепт імбирного печива" width="900" height="1106" loading="lazy">
+          </figure>
+          <p class="flow-caption">
+            Одне фото сторінки із зошита в чат із ботом — «Імбирне печиво», 100&nbsp;г масла, 3&nbsp;ч.&nbsp;л. меду, 2&nbsp;ч.&nbsp;л. імбиру. Набирати руками нічого не треба.
+            
+          </p>
+        </div>
+
+        <div class="flow-arrow" aria-hidden="true">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><path d="M8 28h38M34 16l12 12-12 12" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="flow-side">
+          <span class="flow-label is-out"><svg class="flow-icon" width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.2 11.7 7 16.5 8.7 11.7 10.4 10 15.2 8.3 10.4 3.5 8.7 8.3 7 10 2.2ZM15.8 13.2l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7.7-1.9Z" fill="currentColor"/></svg> Що повертається</span>
+          <div class="flow-pair">
+            <div class="phone phone-sm"><div class="phone-screen"><img src="assets/screens/recipe.jpg" alt="Картка рецепту в застосунку: калорійність, склад і джерело цифр" width="780" height="1688" loading="lazy"></div></div>
+            <div class="phone phone-sm"><div class="phone-screen"><img src="assets/screens/recipe-ingredients.jpg" alt="Інгредієнти рецепту з кількостями та лічильником порцій" width="780" height="1688" loading="lazy"></div></div>
+          </div>
+          <p class="flow-caption">
+            Картка з інгредієнтами та їхніми кількостями, кроками, калорійністю і лічильником порцій — і папка в колекції. На знімках — реальні екрани застосунку з рецептом «Червоний борщ», збереженим із TikTok.
+            
+          </p>
+        </div>
+      </div>
+
+      <p class="disclosure">
+        Обидві половини справжні, але це два різні приклади: ліворуч — сторінка зошита, яку можна надіслати боту, праворуч — знімок застосунку з уже збереженим рецептом. Ми ставимо їх поруч, щоб показати крок, а не видати за один запуск.
+        
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= VIDEO  ->  WEEK OF PREP ================= -->
+  <section class="tight" id="video">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Одне посилання — тиждень заготовок</p>
+        <h2 class="heading"><span class="accent-orange">Подивилися відео</span> — і заготовки вже в застосунку</h2>
+        <p class="lede">
+          Ролик «заготовки на тиждень» — це чотири страви в одному описі. Надішліть посилання, і вони
+          стануть чотирма окремими рецептами в одній папці. Перегляд, заготовка й покупка
+          продуктів — в одному застосунку.
+        </p>
+      </div>
+
+      <div class="chain">
+        <div class="chain-step">
+          <span class="flow-label"><svg class="flow-icon" width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="1.6" y="3.4" width="16.8" height="13.2" rx="3.6" fill="currentColor"/><path d="M8.2 7.2 12.9 10l-4.7 2.8V7.2Z" fill="#fff"/></svg> Відео, яке ви подивилися</span>
+          <div class="link-card">
+            <div class="link-card-top">
+              <img src="assets/youtube-preview.jpg" alt="Прев’ю відео на YouTube про заготовки на тиждень" width="640" height="360" loading="lazy">
+              <span class="play-badge" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M9.5 6.8 19 13l-9.5 6.2V6.8Z" fill="#fff"/></svg>
+              </span>
+            </div>
+            <div class="link-card-body">
+              <p class="link-card-kicker" style="margin:0">YouTube</p>
+              <p class="link-card-title">Заготовки на тиждень — чотири страви в одному описі</p>
+              <a class="link-card-url" href="https://youtu.be/qUT3nRyMJbY" target="_blank" rel="noopener noreferrer">youtu.be/qUT3nRyMJbY</a>
+            </div>
+          </div>
+          <p class="flow-caption">Перешліть боту посилання так само, як переслали б його подрузі.</p>
+        </div>
+
+        <div class="flow-arrow" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none"><path d="M8 28h38M34 16l12 12-12 12" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="chain-step">
+          <span class="flow-label is-out"><svg class="flow-icon" width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4.6h4.4A2.6 2.6 0 0 1 10 7.2v9a2.2 2.2 0 0 0-2.2-2.2H3V4.6ZM17 4.6h-4.4A2.6 2.6 0 0 0 10 7.2v9a2.2 2.2 0 0 1 2.2-2.2H17V4.6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg> Папка з рецептами</span>
+          <div class="phone phone-sm"><div class="phone-screen"><img src="assets/screens/batch.jpg" alt="Збережений допис «Заготовки в морозилку» — чотири страви з одного відео" width="780" height="1688" loading="lazy"></div></div>
+          <p class="flow-caption">«Заготовки в морозилку · 4 страви» — курячий гуляш, січеники, млинці з куркою та грибами й шніцель, кожна страва окремим рецептом.</p>
+        </div>
+
+        <div class="flow-arrow" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none"><path d="M8 28h38M34 16l12 12-12 12" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="chain-step">
+          <span class="flow-label is-out"><svg class="flow-icon" width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M1.8 2.6h2.1l2 9.6h9.1M5.9 9.7h9.4l1.5-5.4H4.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7.4" cy="16" r="1.5" fill="currentColor"/><circle cx="14.4" cy="16" r="1.5" fill="currentColor"/></svg> Продукти на всі чотири</span>
+          <div class="phone phone-sm"><div class="phone-screen"><img src="assets/screens/list.jpg" alt="Список продуктів на всі страви з папки, згрупований за відділами магазину" width="780" height="1688" loading="lazy"></div></div>
+          <p class="flow-caption">«Усе в покупки» — і всі чотири страви згортаються в один список за відділами магазину.</p>
+        </div>
+      </div>
+
+      <p class="disclosure">
+        Рецепт ми беремо з опису під відео, а не з аудіо. Якщо він існує лише в самому ролику,
+        застосунок так і скаже й попросить текст — замість того, щоб вигадати кроки.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+
+      <!-- Benefit 2 -->
+      <div class="feature reverse" id="cook">
+        <div class="feature-copy">
+          <p class="eyebrow">Можливість 02</p>
+          <h2 class="heading">
+            <span class="accent-orange">Перевірте, що можна зварити</span> з того, що ви вже купили
+            
+          </h2>
+          <p>
+            СмачноЄ дивиться на вашу історію покупок у Сільпо й показує страви, які реально зібрати з того, що вже вдома. Під кожною — рядок «купували: молоко, сир твердий», щоб було видно, звідки взялася підказка.
+            
+          </p>
+          <ul class="checklist">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Ккал на всю страву, час приготування і кількість інгредієнтів — одразу на картці.
+              
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Обране одразу опиняється у вашій колекції — є з чого починати план і список.
+              
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Не хочете ділитися історією покупок — крок можна пропустити, застосунок працює й без нього.
+              
+            </li>
+          </ul>
+        </div>
+
+        <div class="feature-media pair">
+          <div class="phone"><div class="phone-screen"><img src="assets/screens/cookable.jpg" alt="Екран «З цього вже можна зварити» — страви на основі того, що ви купували" width="780" height="1688" loading="lazy"></div></div>
+          <div class="phone phone-sm"><div class="phone-screen"><img src="assets/screens/search.jpg" alt="Пошук у колекції рецептів" width="780" height="1688" loading="lazy"></div></div>
+        </div>
+      </div>
+
+      <!-- Benefit 3 -->
+      <div class="feature" id="plan">
+        <div class="feature-copy">
+          <p class="eyebrow">Можливість 03</p>
+          <h2 class="heading">
+            <span class="accent-orange">Плануйте тиждень</span> — і йдіть у магазин зі списком
+            
+          </h2>
+          <p>
+            Розкладіть страви по днях, і кілька рецептів згорнуться в один список: рядок на інгредієнт із сумарною вагою, згрупований за відділами — овочі, м’ясо, молочне. Той самий список працює і в залі магазину, і онлайн.
+            
+          </p>
+          <ul class="checklist">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              План на тиждень із порціями та днем готування — «готую в неділю, їмо в середу» теж працює.
+              
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Зніміть галочку з того, що вже є вдома — список перерахується сам.
+              
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Агент шукає товари у вашому магазині, віддає перевагу акційним, пропускає те, чого немає, — і називає це вголос.
+              
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Те, що ви поклали в кошик самі, залишається недоторканим, поки ви не скажете інакше.
+              
+            </li>
+          </ul>
+        </div>
+
+        <div class="feature-media trio">
+          <div class="phone phone-sm"><div class="phone-screen"><img src="assets/screens/plan.jpg" alt="План харчування на тиждень по днях" width="780" height="1688" loading="lazy"></div></div>
+          <div class="phone"><div class="phone-screen"><img src="assets/screens/list.jpg" alt="Список продуктів, згрупований за відділами магазину" width="780" height="1688" loading="lazy"></div></div>
+          <div class="phone phone-sm"><div class="phone-screen"><img src="assets/screens/aisles.jpg" alt="Список продуктів за відділами магазину: сумарна вага на кожен інгредієнт" width="780" height="1688" loading="lazy"></div></div>
+        </div>
+      </div>
+
+      <!-- Benefit 4 -->
+      <div class="feature reverse" id="agent">
+        <div class="feature-copy">
+          <p class="eyebrow">Можливість 04</p>
+          <h2 class="heading">
+            <span class="accent-orange">Спитайте, що в акції</span> — і зберіть із цього вечерю
+            
+          </h2>
+          <p>
+            Помічник у вкладці «Продукти» знає поточні знижки у вашому магазині й уміє звести їх із вашою колекцією: показує, які саме страви складаються з акційних товарів, і може стежити за ціною на потрібні позиції.
+            
+          </p>
+          <p>
+            Бот повідомляє суму й те, скільки зекономили акції. Оплату ви робите самі — агент лише наповнює кошик і віддає посилання.
+            
+          </p>
+        </div>
+
+        <div class="feature-media pair">
+          <div class="phone"><div class="phone-screen"><img src="assets/screens/agent.jpg" alt="Чат із помічником про акції та страви з акційних товарів" width="780" height="1688" loading="lazy"></div></div>
+          <div class="phone phone-sm"><div class="phone-screen"><img src="assets/screens/aisles.jpg" alt="Список продуктів за відділами з сумарною вагою" width="780" height="1688" loading="lazy"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="tight">
+    <div class="wrap">
+      <div class="stats">
+        <div>
+          <div class="stat-value accent-orange">7</div>
+          <div class="stat-label">джерел, з яких приходить рецепт</div>
+        </div>
+        <div>
+          <div class="stat-value accent-green">1</div>
+          <div class="stat-label">повідомлення від рецепта до колекції</div>
+        </div>
+        <div>
+          <div class="stat-value accent-blue">7</div>
+          <div class="stat-label">днів у плані, один список на всі</div>
+        </div>
+        <div>
+          <div class="stat-value">0</div>
+          <div class="stat-label">платежів, які робить агент</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HONEST LIMITS ================= -->
+  <section class="limits-band" id="limits">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Чесно</p>
+        <h2 class="heading">
+          <span class="accent-orange">Чого ми не робимо</span> — і кажемо це в застосунку
+          
+        </h2>
+        <p class="lede">
+          Ці межі написані не тільки тут. Вони стоять у самому інтерфейсі, поруч із даними, яких вони стосуються.
+          
+        </p>
+      </div>
+
+      <div class="limits">
+        <div class="limit">
+          <h3>Ми показуємо склад, а не перевіряємо його</h3>
+          <p>Алергени, знайдені у складі, — це підказка, а не перевірка. Застосунок ніколи не називає страву безпечною. Якщо у вас алергія, звіряйте склад на упаковці.
+             </p>
+        </div>
+        <div class="limit">
+          <h3>Рецепт беремо з опису, а не з аудіо</h3>
+          <p>Якщо рецепт існує лише в самому відео, ми так і кажемо й просимо текст — замість того, щоб вигадати кроки.
+             </p>
+        </div>
+        <div class="limit">
+          <h3>Калорійність орієнтовна й завжди підписана</h3>
+          <p>Цифри рахуються з таблиці інгредієнтів, і поруч завжди видно джерело та що саме не вдалося врахувати. Жодних медичних обіцянок.
+             </p>
+        </div>
+        <div class="limit">
+          <h3>Агент ніколи не платить</h3>
+          <p>Він наповнює кошик і віддає посилання на оформлення. Останній крок — за вами, у Сільпо.
+             </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="tight">
+    <div class="wrap">
+      <div class="cta-card">
+        <h2 class="heading">
+          <span class="accent-orange">Почніть зі СмачноЄ</span> сьогодні
+          
+        </h2>
+        <p class="lede">
+          Відкрийте бота в Telegram і надішліть перше посилання. Рецепт з’явиться у вашій колекції за кілька секунд.
+          
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-filled btn-lg" href="https://t.me/SmachnoYe_bot" target="_blank" rel="noopener noreferrer">
+            Відкрити @SmachnoYe_bot
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-dark btn-lg" href="https://smachnoyesilpo-production.up.railway.app" target="_blank" rel="noopener noreferrer">
+            Відкрити застосунок
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="#top" style="margin-bottom:14px">
+        <img src="assets/favicon.svg" alt="">
+        <span>СмачноЄ</span>
+      </a>
+      <p class="footer-note">
+        Демонстраційна сторінка проєкту для хакатону Silpo AI&nbsp;Factory. Сторінка навмисно закрита від індексації пошуковими системами й не є публічним продуктом.
+        
+      </p>
+    </div>
+    <div class="footer-links">
+      <a href="https://t.me/SmachnoYe_bot" target="_blank" rel="noopener noreferrer">@SmachnoYe_bot</a>
+      <a href="https://smachnoyesilpo-production.up.railway.app" target="_blank" rel="noopener noreferrer">Застосунок</a>
+      <a href="https://github.com/Katerina333/SmachnoYe_Silpo" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="#limits">Чесні межі</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

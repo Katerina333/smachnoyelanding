@@ -1069,3 +1069,47 @@ section.tight { padding-block: var(--spacing-64); }
 @media (max-width: 860px) {
   .spot-cards { grid-template-columns: 1fr; }
 }
+
+/* --- Hero: badge, source strip ------------------------------------------ */
+
+.hero-badge {
+  display: inline-block;
+  margin: 0 0 var(--spacing-24);
+  border-radius: var(--radius);
+  background: var(--color-fog);
+  padding: 7px 16px;
+  font-size: var(--text-tiny);
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--color-ember-orange);
+}
+
+.sources {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: var(--spacing-32) auto 0;
+  padding: 0;
+  max-width: 940px;
+}
+.sources li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius);
+  padding: 9px 16px;
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--color-graphite);
+}
+.sources svg { width: 17px; height: 17px; flex: none; color: var(--color-ember-orange); }
+
+@media (max-width: 620px) {
+  .sources { gap: 7px; }
+  .sources li { padding: 7px 12px; font-size: var(--text-tiny); }
+  .sources svg { width: 15px; height: 15px; }
+}

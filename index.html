@@ -39,10 +39,9 @@
 
     <nav class="site-nav">
       <a href="#problem">Навіщо</a>
-      <a href="#how">Як працює</a>
-      <a href="#save">Можливості</a>
+      <a href="#save">Рецепти</a>
+      <a href="#agents">Агенти</a>
       <a href="#scan">Сканер</a>
-      <a href="#mcp">Помічник</a>
       <a href="#limits">Чесно</a>
     </nav>
 
@@ -196,24 +195,22 @@
     </div>
   </section>
 
+  <!-- ================= CHAPTER 1 ================= -->
+  <section class="chapter">
+    <div class="wrap">
+      <p class="chapter-num">Розділ 01</p>
+      <h2 class="display-sm">Рецепти — <span class="accent-orange">зібрати й приготувати</span></h2>
+      <p class="lede">Усе, що ви колись зберегли, в одному місці — і тиждень, за яким це справді готується.</p>
+    </div>
+  </section>
+
   <!-- ================= 01 · SAVE FROM ANYWHERE ================= -->
   <section id="save">
     <div class="wrap">
       <div class="feature">
         <div class="feature-copy">
-          <p class="eyebrow">Можливість 01</p>
           <h2 class="heading"><span class="accent-orange">Рецепти звідусіль</span> — одним повідомленням</h2>
           <p class="lede">Надішліть боту що завгодно — він прочитає й розкладе на інгредієнти з вагою, кроки та калорії.</p>
-          <div class="tag-row">
-            <span class="tag">Посилання</span>
-            <span class="tag">YouTube</span>
-            <span class="tag">TikTok</span>
-            <span class="tag">Instagram</span>
-            <span class="tag">Фото сторінки</span>
-            <span class="tag">Рукопис</span>
-            <span class="tag">Голосове</span>
-            <span class="tag">Текст</span>
-          </div>
           <a class="btn btn-filled" href="https://t.me/SmachnoYe_bot" target="_blank" rel="noopener noreferrer">
             Спробувати
             <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -232,7 +229,7 @@
   <section id="paper" class="tight flow-band">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Зі шпаргалки бабусі</p>
+        <p class="eyebrow">Приклад</p>
         <h2 class="heading">Рукописний рецепт — теж рецепт</h2>
       </div>
 
@@ -263,7 +260,7 @@
   <section id="video" class="tight">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Одне посилання</p>
+        <p class="eyebrow">Приклад</p>
         <h2 class="heading">Відео на тиждень заготовок — <span class="accent-orange">чотири рецепти</span></h2>
       </div>
 
@@ -309,7 +306,6 @@
     <div class="wrap">
       <div class="feature reverse">
         <div class="feature-copy">
-          <p class="eyebrow">Можливість 02</p>
           <h2 class="heading"><span class="accent-orange">Що зварити</span> з того, що вже купили</h2>
           <p class="lede">СмачноЄ дивиться на ваші покупки в Сільпо й показує страви, які реально зібрати вже сьогодні.</p>
           <div class="tag-row">
@@ -332,7 +328,6 @@
     <div class="wrap">
       <div class="feature">
         <div class="feature-copy">
-          <p class="eyebrow">Можливість 03</p>
           <h2 class="heading"><span class="accent-orange">Тиждень</span> — і один список на всі страви</h2>
           <p class="lede">Рядок на інгредієнт із сумарною вагою, за відділами магазину. Візьміть із собою — або дайте помічнику зібрати кошик у вашому Сільпо.</p>
           <div class="tag-row">
@@ -356,12 +351,55 @@
     </div>
   </section>
 
+  <!-- ================= CHAPTER 2 ================= -->
+  <section class="chapter chapter-alt">
+    <div class="wrap">
+      <p class="chapter-num">Розділ 02</p>
+      <h2 class="display-sm">Агенти — <span class="accent-orange">покупки за вас</span></h2>
+      <p class="lede">Чотири агенти працюють за розкладом або з одного дотику. Жоден із них не платить.</p>
+    </div>
+  </section>
+
+  <!-- ================= THE FOUR AGENTS ================= -->
+  <section id="agents" class="tight">
+    <div class="wrap">
+      <div class="agent-grid">
+        <div class="agent-card">
+          <span class="agent-when">за розкладом</span>
+          <h3>Базові покупки</h3>
+          <p>Читає ваші чеки й знаходить те, що ви берете щотижня незалежно від страв — молоко, хліб, каву.</p>
+          <p class="agent-rule">Товар зараховується, лише якщо траплявся у двох різних покупках. Що ви прибрали — залишається прибраним.</p>
+        </div>
+
+        <div class="agent-card">
+          <span class="agent-when">за розкладом</span>
+          <h3>План на тиждень</h3>
+          <p>Складає тиждень із ваших рецептів — тих, які ви самі зберегли.</p>
+          <p class="agent-rule">Тільки з вашої колекції. Нічого не вигадує.</p>
+        </div>
+
+        <div class="agent-card">
+          <span class="agent-when">за розкладом</span>
+          <h3>Кошик за планом</h3>
+          <p>Збирає кошик Сільпо з вашого списку: шукає товари у вашому магазині, віддає перевагу акційним.</p>
+          <p class="agent-rule">Те, що поклали ви, не чіпає. Оформлення — за вами.</p>
+        </div>
+
+        <div class="agent-card">
+          <span class="agent-when">за розкладом</span>
+          <h3>Кошик для родини</h3>
+          <p>Питає в сімейному чаті, чого треба, чекає, поки всі відпишуться, — і йде по покупки з цим списком.</p>
+          <p class="agent-rule">Кожен рядок зберігається тими словами, якими його написали.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= 04 · PROMOTIONS ================= -->
   <section id="agent" class="flow-band">
     <div class="wrap">
       <div class="feature reverse">
         <div class="feature-copy">
-          <p class="eyebrow">Можливість 04</p>
           <h2 class="heading"><span class="accent-orange">Що зараз в акції</span> — і що з цього зварити</h2>
           <p class="lede">Помічник сам дивиться знижки вашого магазину, звіряє їх із вашою колекцією та стежить за ціною. Платите ви.</p>
           <div class="tag-row">
@@ -383,7 +421,6 @@
   <section id="scan">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Можливість 05 · нове</p>
         <h2 class="heading"><span class="accent-orange">Зніміть пачку на полиці</span> — і побачте, що з неї приготувати</h2>
       </div>
 
@@ -474,38 +511,6 @@
             <div><b>0</b><span>платежів від агента</span></div>
           </div>
           <p class="scan-foot">Кожен виклик пишеться в <code class="inline-code">mcp_calls</code>, а <code class="inline-code">make trace</code> віддає справжній JSON-RPC лог.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FAMILY GROUP ================= -->
-  <section id="family">
-    <div class="wrap">
-      <div class="spotlight">
-        <span class="badge">Ще одна скринька</span>
-        <h2 class="display-sm">«Що на вечерю?»</h2>
-        <p class="lede spotlight-lede">
-          Додайте бота в сімейний чат. Усе, що хтось туди кидає, лягає в ту саму колекцію,
-          з якої збирається план і список.
-        </p>
-
-        <div class="spot-cards">
-          <div class="spot-card">
-            <span class="spot-num">01</span>
-            <h3>Кожен додає своє</h3>
-            <p>TikTok від доньки, фото зошита від мами, голосове від тата.</p>
-          </div>
-          <div class="spot-card">
-            <span class="spot-num">02</span>
-            <h3>Бот пропонує план</h3>
-            <p>Зі страв, які родина справді любить і сама додала.</p>
-          </div>
-          <div class="spot-card">
-            <span class="spot-num">03</span>
-            <h3>Один список на всіх</h3>
-            <p>Улюблені страви всієї групи — в один список за відділами.</p>
-          </div>
         </div>
       </div>
     </div>

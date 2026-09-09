@@ -1113,3 +1113,72 @@ section.tight { padding-block: var(--spacing-64); }
   .sources li { padding: 7px 12px; font-size: var(--text-tiny); }
   .sources svg { width: 15px; height: 15px; }
 }
+
+/* --- Chapter dividers --------------------------------------------------- */
+
+.chapter {
+  padding-block: var(--spacing-64) var(--spacing-40);
+  text-align: center;
+}
+.chapter .wrap { max-width: 780px; }
+.chapter-num {
+  margin: 0 0 var(--spacing-24);
+  font-size: var(--text-tiny);
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+.chapter-num::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin: 0 auto var(--spacing-24);
+  border-radius: 2px;
+  background: var(--color-ember-orange);
+}
+.chapter h2 { margin-bottom: var(--spacing-24); }
+.chapter .lede { margin: 0; }
+
+/* --- The four agents ---------------------------------------------------- */
+
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-24);
+}
+.agent-card {
+  border-radius: var(--radius);
+  background: var(--color-fog);
+  padding: var(--spacing-32);
+}
+.agent-when {
+  display: inline-block;
+  margin-bottom: 14px;
+  border-radius: var(--radius);
+  background: var(--color-paper-white);
+  padding: 5px 13px;
+  font-size: var(--text-tiny);
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--color-ember-orange);
+}
+.agent-card h3 { font-size: var(--text-heading-sm); margin-bottom: 10px; }
+.agent-card p {
+  margin: 0;
+  font-size: var(--text-body-sm);
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+.agent-rule {
+  margin-top: 14px !important;
+  padding-top: 14px;
+  border-top: 1px solid #e3e3e3;
+  font-size: var(--text-caption) !important;
+}
+
+@media (max-width: 860px) {
+  .agent-grid { grid-template-columns: 1fr; }
+}

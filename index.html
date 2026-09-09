@@ -42,6 +42,7 @@
       <a href="#how">Як працює</a>
       <a href="#save">Рецепти</a>
       <a href="#plan">План і список</a>
+      <a href="#scan">Сканер</a>
       <a href="#mcp">MCP «Сільпо»</a>
       <a href="#family">Родина</a>
       <a href="#limits">Чесно</a>
@@ -460,6 +461,74 @@
     </div>
   </section>
 
+  <!-- ================= SHELF SCAN ================= -->
+  <section id="scan" class="scan-band">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Можливість 05 · нове</p>
+        <h2 class="heading"><span class="accent-orange">Сфотографуйте пачку в магазині</span> — і дізнайтесь, що з неї приготувати</h2>
+        <p class="lede">
+          Застосунок називається «рецепти з того, що є». Досі «що є» означало ваші чеки. Тепер це
+          працює буквально: ви стоїте біля полиці, знімаєте упаковку — і бачите, скільки вона
+          коштує <b>саме у вашому магазині</b>, чи вона вже у вашому кошику і до якого з
+          <b>ваших</b> рецептів вона підходить.
+        </p>
+      </div>
+
+      <div class="scan-grid">
+        <div class="reply" role="img" aria-label="Приклад відповіді бота на фото товару з полиці">
+          <div class="reply-head">
+            <span class="reply-cmd">/scan</span>
+            <span class="reply-tag">приклад відповіді</span>
+          </div>
+
+          <div class="reply-body">
+            <p class="reply-name">📷 <b>Кефір 2.5%</b></p>
+            <p class="reply-shelf">🏷 Кефір 2.5% 900 г · Галичина — <b>62,90 ₴</b></p>
+            <p class="reply-ok">✅ Уже у вашому кошику Сільпо.</p>
+            <p class="reply-nutri">🔬 На 100 г, за даними Сільпо: 53 ккал, 2.8 г білка, 2.5 г жиру, 4.7 г вуглеводів</p>
+
+            <p class="reply-sub"><b>З ваших рецептів:</b></p>
+            <ul class="reply-list">
+              <li>Сирники — ще треба: сир кисломолочний, яйце, борошно</li>
+              <li>Млинці з куркою — ще треба: борошно, куряче філе</li>
+            </ul>
+
+            <div class="reply-btns">
+              <span>🛒 У покупки</span>
+              <span>🔎 Схоже в магазині</span>
+              <span>➕ Докупити для «Сирники»</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="scan-copy">
+          <h3>Три речі, яких воно навмисно не робить</h3>
+          <ul class="checklist">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span><b>Не вигадує товар.</b> Етикетку читає модель, а про наявність і ціну питає полицю — <code class="inline-code">find_products_batch</code> у вашому магазині. Якщо збігу немає, відповідь буде «за назвою … нічого не знайшли» — <i>із назвою, яку ми прочитали</i>, щоб ви побачили, що ми не так розібрали.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span><b>Не вигадує калорійність.</b> Цифри беруться з <code class="inline-code">get_product_details</code> Сільпо і підписані як їхні. Чого немає в даних — не з’являється на екрані: нуль калорій теж був би твердженням.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span><b>Не видає ідеї за ваші рецепти.</b> Якщо у вашій колекції такого немає, українська модель підкаже, що з цього готують удома — але під заголовком «Це підказки, а не збережені рецепти», і жодна з них не зберігається сама.</span>
+            </li>
+          </ul>
+
+          <p class="scan-foot">
+            Відповідь закінчується кнопками, бо факт, з яким нічого не зробиш, — це листівка.
+            <b>«У покупки»</b> додає товар, <b>«Докупити для …»</b> додає лише те, чого бракує для
+            однієї страви, а <b>«Схоже в магазині»</b> питає Сільпо про аналоги на тій самій полиці.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= MCP / AGENCY ================= -->
   <section id="mcp">
     <div class="wrap">
@@ -514,7 +583,7 @@
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Дві поверхні з різними наборами інструментів: «План» планує тиждень, «Покупки» працює з цінами й кошиком.
+              <span>Дві поверхні з різними наборами інструментів: «План» планує тиждень, «Покупки» працює з цінами й кошиком. Сканування полиці додає <code class="inline-code">get_product_details</code> і <code class="inline-code">get_similar_products</code>.</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="#00b33f"/><path d="M5.8 10.3l2.7 2.7 5.7-5.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -523,7 +592,7 @@
           </ul>
 
           <div class="mcp-stats">
-            <div><b>21</b><span>із 25 tools MCP «Сільпо» задіяно</span></div>
+            <div><b>23</b><span>із 26 tools MCP «Сільпо» задіяно</span></div>
             <div><b>19</b><span>інструментів агента у двох поверхнях</span></div>
             <div><b>303</b><span>виклики tools/call в одному прогоні демо</span></div>
             <div><b>0</b><span>платежів, які робить агент</span></div>

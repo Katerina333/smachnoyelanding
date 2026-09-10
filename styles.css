@@ -1182,3 +1182,11 @@ section.tight { padding-block: var(--spacing-64); }
 @media (max-width: 860px) {
   .agent-grid { grid-template-columns: 1fr; }
 }
+
+/* the closing agent card runs the full width of the grid */
+.agent-card.is-wide { grid-column: 1 / -1; }
+.agent-card.is-wide h3 { font-size: var(--text-heading); }
+
+@media (max-width: 860px) {
+  .agent-card.is-wide h3 { font-size: var(--text-heading-sm); }
+}

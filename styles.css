@@ -1190,3 +1190,35 @@ section.tight { padding-block: var(--spacing-64); }
 @media (max-width: 860px) {
   .agent-card.is-wide h3 { font-size: var(--text-heading-sm); }
 }
+
+/* --- The dictated list, as it comes back in the chat --------------------- */
+
+.tick-list { list-style: none; margin: 8px 0 0; padding: 0; }
+.tick-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 3px 0;
+  font-size: var(--text-tiny);
+  font-weight: 800;
+  letter-spacing: .07em;
+  color: var(--color-sky-blue);
+}
+.tick-list li:not(:first-child) { margin-top: 10px; }
+.tick-list li .tick { display: none; }
+
+.tick-list li.tick-item {
+  margin-top: 0;
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--color-graphite);
+  padding: 5px 0;
+}
+.tick-list li.tick-item .tick {
+  display: block;
+  flex: none;
+  width: 15px; height: 15px;
+  border: 1.7px solid #c9c9c9;
+  border-radius: 4px;
+}

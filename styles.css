@@ -5,17 +5,18 @@
 
 :root {
   /* Colors */
-  --color-ember-orange: #ff5406;
-  --color-verdant-green: #00b33f;
-  --color-signal-red-orange: #ff3400;
-  --color-sky-blue: #00a9dd;
-  --color-sunset-orange: #ff6d00;
-  --color-graphite: #2f2f2f;
+  --color-ember-orange: #6b3df5;
+  --color-verdant-green: #12805f;
+  --color-signal-red-orange: #d93036;
+  --color-sky-blue: #2f6feb;
+  --color-plum: #8b5cf6;
+  --color-sunset-orange: #b06f00;
+  --color-graphite: #0b0b0f;
   --color-charcoal: #000000;
-  --color-fog: #f5f5f5;
+  --color-fog: #f4f4f6;
   --color-paper-white: #ffffff;
-  --color-muted: #6f6f6f;
-  --color-hairline: #e6e6e6;
+  --color-muted: #6b6b73;
+  --color-hairline: #e4e4e9;
 
   /* Typography */
   --font-brand: 'Nunito Sans', ui-sans-serif, system-ui, -apple-system,
@@ -125,7 +126,7 @@ h1, h2, h3 { margin: 0; font-weight: 800; line-height: 1.2; letter-spacing: -0.0
 .btn svg { flex: none; }
 
 .btn-filled { background: var(--color-ember-orange); color: #fff; }
-.btn-filled:hover { background: #e64a04; }
+.btn-filled:hover { background: #5a2ee6; }
 
 .btn-dark { background: var(--color-graphite); color: #fff; }
 .btn-dark:hover { background: #1a1a1a; }
@@ -149,7 +150,7 @@ h1, h2, h3 { margin: 0; font-weight: 800; line-height: 1.2; letter-spacing: -0.0
   text-align: center;
   padding: 9px var(--spacing-24);
 }
-.ribbon b { color: #ffb08a; font-weight: 700; }
+.ribbon b { color: #c9b3ff; font-weight: 700; }
 
 /* --- Header ------------------------------------------------------------- */
 
@@ -457,7 +458,7 @@ section.tight { padding-block: var(--spacing-64); }
   .link-card { max-width: 280px; }
 }
 
-.flow-icon { flex: none; }
+.flow-icon { flex: none; width: 17px; height: 17px; }
 .flow-label .flow-icon { color: var(--color-ember-orange); }
 .flow-label.is-out .flow-icon { color: #fff; }
 
@@ -818,7 +819,7 @@ section.tight { padding-block: var(--spacing-64); }
   margin: 20px 0 18px;
   font-size: var(--text-body-sm);
   font-weight: 700;
-  color: #ffb894;
+  color: #c9b3ff;
 }
 
 .trace-list {
@@ -862,7 +863,7 @@ section.tight { padding-block: var(--spacing-64); }
 .trace-list code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: var(--text-caption);
-  color: #ffd0b8;
+  color: #d9c9ff;
   word-break: break-word;
 }
 .trace-list span {
@@ -1281,3 +1282,25 @@ section.tight { padding-block: var(--spacing-64); }
 /* balance multi-line headings and the badge, so a phone never strands one word
    («ТЕБЕ») on its own line; ignored where the browser does not support it */
 .hero-badge, h1, h2 { text-wrap: balance; }
+
+/* --- Rebuild (ADR-177/178): the plum of «Для тебе», and the demo line ---- */
+
+.accent-plum { color: var(--color-plum); }
+.chapter-plum .chapter-num::before { background: var(--color-plum); }
+.demo-note {
+  margin: var(--spacing-24) 0 0 !important;
+  font-size: var(--text-caption) !important;
+  color: var(--color-muted);
+  border-left: 3px solid var(--color-plum);
+  padding-left: 12px;
+}
+.brand img { border-radius: 9px; }
+
+/* ADR-180: the wordmark is one word — «Вайб» with МІ carrying the accent */
+.wordmark em { font-style: normal; color: var(--color-ember-orange); }
+
+/* a single hero clip sits centred rather than in a row of three */
+.clips-pair { grid-template-columns: repeat(2, 1fr); }
+.clips-pair .clip .phone { --phone-w: 260px; }
+.clips-pair figcaption { max-width: 40ch; }
+@media (max-width: 860px) { .clips-pair { grid-template-columns: 1fr; } }

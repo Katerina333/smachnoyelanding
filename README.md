@@ -1,12 +1,22 @@
-# СмачноЄ — landing page
+# ВайбМІ — landing page
 
-Demo landing page for **СмачноЄ**, a Telegram Mini App built for the Silpo AI Factory
+Demo landing page for **ВайбМІ**, a Telegram Mini App built for the Silpo AI Factory
 hackathon. Plain static HTML/CSS — no build step, no dependencies.
 
     index.html    the page
-    styles.css    design system + layout
+    styles.css    design tokens + layout
+    script.js     hides a clip's play badge once the video actually plays
     robots.txt    search-engine policy (see below)
-    assets/       favicon, the handwritten-recipe photo, app screenshots
+    assets/       brand icon, the handwritten-recipe photo, app screens, app videos
+    tools/        scripts that capture the screens and videos from the running app
+
+## The name
+
+The product is **ВайбМІ** (ADR-180). The wordmark is one word with **МІ** carrying the
+accent. `@SmachnoYe_bot` keeps its old username on purpose — every share link, studio
+invite and ticket QR points at it — so the CTA links here are correct as they are. The
+repository and the Railway domain keep the old name for the same reason: they identify
+the project rather than name it to anyone.
 
 ## Kept out of search — on purpose
 
@@ -22,27 +32,32 @@ stop Googlebot from fetching the page, so it would never read the `noindex` abov
 URL could still surface in results. Do not add a `Disallow` rule unless you also remove the
 meta tag.
 
-There is no sitemap, and nothing here should be submitted to Search Console.
+## What is on the page
 
-## Screenshots
+The three things the app does, in the app's own order (ADR-177):
 
-Every phone screenshot is a real screen from the running app, captured at 390×844 @2x
-(780×1688) against a local instance in `SIM_MODE=1`, seeded through the app's own onboarding
-so the recipes, images, plan and grocery list are genuine app data — not mockups.
+- **Рецепти** — a collection built from links, reels, a photo of a handwritten page or a voice
+  note, plus the agent that reads the last shopping and proposes dishes from that collection.
+- **Покупки** — one list grouped by aisle, and the Silpo cart with the total and the checkout.
+- **Для тебе** — sport studios near the guest's address, a −15% ticket valid 48 hours,
+  confirmed by the studio in the bot. Studios on the screens are labelled «Демо» because they
+  are examples and do not exist; the page says so where they appear.
 
-The one photograph (`assets/handwritten-recipe.jpg`) is a real page from a handwritten
-recipe notebook, shown as an example of what you can send the bot. The "from paper to a card"
-section states in the page itself that its two halves are two separate real examples rather
-than one single run.
+## Screens and videos are real
+
+Every phone screen is a capture of the running app at 390×844 @2x, taken against a local
+instance in `SIM_MODE=1` seeded through the app's own onboarding — so the recipes, thumbnails,
+list and cart are real app data, not mockups. The two videos are the app's own reels, recorded
+from the same instance: the ten-scene app video shown at onboarding, and «Як працюють квитки».
+
+Re-capture them with `tools/` when the app changes — see `tools/README.md`.
 
 ## Design
 
-Follows `DESIGN(2).md`: white canvas, Fog `#f5f5f5` alternate surface, Ember Orange
-`#ff5406` brand accent, Verdant Green `#00b33f` for the achievement headline, Graphite
-`#2f2f2f` text, 26px radii everywhere, no shadows, 96px section gaps, 1200px max width.
-Nunito Sans stands in for Aquawax Pro, as the reference recommends.
-
-Ukrainian only — the same language as the app.
+Follows the app's own tokens (`frontend/src/ui/tokens.css`): Electric Iris `#6b3df5` as the one
+filled action colour, `#8b5cf6` as its second tint, `#12805f` for positive figures, text
+`#0b0b0f` on white with `#f4f4f6` as the quiet surface. No shadows anywhere, 26px radii, and
+Nunito Sans standing in for the display face. Ukrainian, in «ти».
 
 ## Run it locally
 
@@ -56,4 +71,4 @@ Then open http://localhost:4321.
 
 - Bot — https://t.me/SmachnoYe_bot
 - App — https://smachnoyesilpo-production.up.railway.app
-- App source — https://github.com/Katerina333/SmachnoYe_Silpo
+- App source — https://github.com/Katerina333/VibeMI

@@ -38,6 +38,7 @@
     </a>
 
     <nav class="site-nav">
+      <a href="#watch">Як це працює</a>
       <a href="#problem">Навіщо</a>
       <a href="#save">Рецепти</a>
       <a href="#voice">Голосом</a>
@@ -59,15 +60,15 @@
   <!-- ================= HERO ================= -->
   <section class="hero">
     <div class="wrap">
-      <p class="hero-badge">Нове · вкладка «Агенти»</p>
+      <p class="hero-badge">Готові агенти, які справді працюють за тебе</p>
 
       <h1 class="display">
-        <span class="accent-green">Ваші особисті агенти</span><br>для домашньої їжі
+        <span class="accent-green">Твоя найкраща колекція рецептів</span><br>і найпростіший шлях їх приготувати
       </h1>
 
       <p class="lede">
-        Рецепти розкидані по чатах, у холодильнику — випадкове, а на вечерю знову нічого.
-        Агенти наводять лад: збирають, планують і купують за вас.
+        Збережи свій час — покупки приходять вчасно і швидко.
+        Агенти не просто шукають, а роблять те, що тобі потрібно.
       </p>
 
       <ul class="sources" aria-label="Звідки приходять рецепти">
@@ -118,6 +119,56 @@
       <div class="phone"><div class="phone-screen"><img src="assets/screens/library.jpg" alt="Колекція рецептів" width="780" height="1688" loading="eager"></div></div>
       <div class="phone"><div class="phone-screen"><img src="assets/screens/aisles.jpg" alt="Список продуктів за відділами магазину" width="780" height="1688" loading="eager"></div></div>
       <div class="phone"><div class="phone-screen"><img src="assets/screens/list.jpg" alt="Список продуктів, згрупований за відділами магазину" width="780" height="1688" loading="eager"></div></div>
+    </div>
+  </section>
+
+  <!-- ================= SEE IT WORK (video slots) =================
+       Each slot is a real <video>. Today it has no <source>, so the browser shows the
+       poster (a real app screenshot) and nothing else — no error, no black box.
+       To add a clip: export it as MP4 (H.264, 390x844 or 780x1688, muted, a few seconds),
+       save it into assets/video/, and put a <source> line inside that slot's <video>:
+
+           <source src="assets/video/recipe.mp4" type="video/mp4">
+
+       autoplay + muted + loop + playsinline is what lets it start by itself on phones. -->
+  <section id="watch" class="flow-band">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Подивись, як це працює</p>
+        <h2 class="heading">Три дії — <span class="accent-orange">і вечеря вирішена</span></h2>
+      </div>
+
+      <div class="clips">
+        <figure class="clip">
+          <div class="phone"><div class="phone-screen">
+            <video class="clip-video" poster="assets/screens/recipe.jpg" muted loop playsinline autoplay preload="none" aria-label="Відео: посилання стає рецептом">
+              <!-- <source src="assets/video/recipe.mp4" type="video/mp4"> -->
+            </video>
+            <span class="clip-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8.5 5.8 18.5 12l-10 6.2V5.8Z" fill="#fff"/></svg></span>
+          </div></div>
+          <figcaption><b>Надішли посилання</b><span>відео, пост чи фото — отримай рецепт</span></figcaption>
+        </figure>
+
+        <figure class="clip">
+          <div class="phone"><div class="phone-screen">
+            <video class="clip-video" poster="assets/screens/list.jpg" muted loop playsinline autoplay preload="none" aria-label="Відео: голосове стає списком продуктів">
+              <!-- <source src="assets/video/voice.mp4" type="video/mp4"> -->
+            </video>
+            <span class="clip-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8.5 5.8 18.5 12l-10 6.2V5.8Z" fill="#fff"/></svg></span>
+          </div></div>
+          <figcaption><b>Скажи, що купити</b><span>голосом — і список уже за відділами</span></figcaption>
+        </figure>
+
+        <figure class="clip">
+          <div class="phone"><div class="phone-screen">
+            <video class="clip-video" poster="assets/screens/aisles.jpg" muted loop playsinline autoplay preload="none" aria-label="Відео: агент збирає кошик">
+              <!-- <source src="assets/video/cart.mp4" type="video/mp4"> -->
+            </video>
+            <span class="clip-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8.5 5.8 18.5 12l-10 6.2V5.8Z" fill="#fff"/></svg></span>
+          </div></div>
+          <figcaption><b>Агент збирає кошик</b><span>у твоєму Сільпо — оформлення за тобою</span></figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -327,8 +378,8 @@
   <section class="chapter chapter-alt">
     <div class="wrap">
       <p class="chapter-num">Розділ 02</p>
-      <h2 class="display-sm">Агенти — <span class="accent-orange">покупки за вас</span></h2>
-      <p class="lede">Три агенти працюють за розкладом або з одного дотику. Жоден із них не платить.</p>
+      <h2 class="display-sm">Готові агенти, <span class="accent-orange">які роблять, а не шукають</span></h2>
+      <p class="lede">Три агенти працюють за розкладом або з одного дотику. Жоден із них не платить за тебе.</p>
     </div>
   </section>
 
@@ -486,5 +537,6 @@
   </div>
 </footer>
 
+<script src="script.js" defer></script>
 </body>
 </html>

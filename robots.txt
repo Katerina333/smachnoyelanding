@@ -1,4 +1,4 @@
-# Смачно Є — hackathon demo landing page. Intentionally kept out of search.
+# ВайбМІ — demo landing page. Intentionally kept out of search.
 #
 # The de-indexing is done by <meta name="robots" content="noindex, nofollow">
 # in index.html. Crawling is deliberately LEFT OPEN here: a "Disallow: /" would

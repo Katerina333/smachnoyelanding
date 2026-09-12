@@ -5,23 +5,24 @@
 
 :root {
   /* Colors */
-  --color-ember-orange: #6b3df5;
-  --color-verdant-green: #12805f;
-  --color-signal-red-orange: #d93036;
-  --color-sky-blue: #2f6feb;
-  --color-plum: #8b5cf6;
-  --color-sunset-orange: #b06f00;
-  --color-graphite: #0b0b0f;
-  --color-charcoal: #000000;
-  --color-fog: #f4f4f6;
-  --color-paper-white: #ffffff;
-  --color-muted: #6b6b73;
-  --color-hairline: #e4e4e9;
+  --color-ember-orange: #e894ff;
+  --color-verdant-green: #93ffe4;
+  --color-signal-red-orange: #ff5c73;
+  --color-sky-blue: #93ffe4;
+  --color-plum: #e894ff;
+  --color-sunset-orange: #ffac47;
+  --color-graphite: #ffffff;
+  --color-charcoal: #ffffff;
+  --color-fog: #291900;
+  --color-paper-white: #23002b;
+  --color-muted: rgba(255,255,255,.66);
+  --color-hairline: rgba(255,255,255,.18);
 
   /* Typography */
-  --font-brand: 'Nunito Sans', ui-sans-serif, system-ui, -apple-system,
+  --font-brand: 'Inter', ui-sans-serif, system-ui, -apple-system,
                 BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif,
                 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji';
+  --font-display: 'Oswald', 'Inter', ui-sans-serif, system-ui, sans-serif;
   --text-tiny: 12px;
   --text-caption: 14px;
   --text-body-sm: 16px;
@@ -45,7 +46,10 @@
   --page-max-width: 1200px;
   --section-gap: 96px;
   --card-padding: 32px;
-  --radius: 26px;
+  --radius: 14px;
+  --radius-pill: 9999px;
+  --ground: #23002b;
+  --ink: #002629;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -1304,3 +1308,87 @@ section.tight { padding-block: var(--spacing-64); }
 .clips-pair .clip .phone { --phone-w: 260px; }
 .clips-pair figcaption { max-width: 40ch; }
 @media (max-width: 860px) { .clips-pair { grid-template-columns: 1fr; } }
+
+/* ==========================================================================
+   The plum poster (ADR-185). Deep plum ground, one lavender accent on it,
+   white break sections where the accent becomes the plum itself — the
+   reference is explicit that lavender belongs to the plum ground only.
+   ========================================================================== */
+
+body { background: var(--ground); color: #fff; letter-spacing: -0.022em; }
+
+/* display type: hierarchy from scale, set solid */
+h1, h2, .display, .display-sm, .heading {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+}
+.display    { font-size: clamp(44px, 9vw, 128px); line-height: 0.85; }
+.display-sm { font-size: clamp(34px, 6vw, 78px);  line-height: 0.88; }
+.heading    { font-size: clamp(30px, 4.4vw, 58px); line-height: 0.92; }
+.lede { letter-spacing: -0.022em; line-height: 1.43; }
+
+/* pills everywhere the reference asks for them */
+.btn, .tag, .hero-badge, .sources li, .agent-when, .flow-label, .badge, .reply-btns span {
+  border-radius: var(--radius-pill);
+}
+/* a filled lavender pill carries plum text, never white */
+.btn-filled { background: var(--color-ember-orange); color: var(--ground); }
+.btn-filled:hover { background: #f2b5ff; }
+.btn-ghost { color: #fff; border-color: rgba(255,255,255,.34); }
+.btn-ghost:hover { border-color: var(--color-ember-orange); color: var(--color-ember-orange); }
+.btn-dark { background: #fff; color: var(--ground); }
+
+/* cards on the plum ground: one warm, one cool */
+.compare-col.is-before, .limit, .mini-card, .agent-card, .spot-card, .step { background: var(--ink); }
+.compare-col.is-after { background: #291900; border-color: var(--color-ember-orange); }
+.cta-card { background: #291900; }
+.phone { background: #000; }
+.ribbon { background: #000; }
+.ribbon b { color: var(--color-ember-orange); }
+
+.site-header { background: rgba(35,0,43,.86); border-bottom-color: rgba(255,255,255,.16); }
+.site-nav a { color: rgba(255,255,255,.82); }
+.site-nav a:hover { color: var(--color-ember-orange); }
+.hero-badge { background: rgba(232,148,255,.14); color: var(--color-ember-orange); }
+.sources li { border-color: rgba(255,255,255,.24); color: #fff; }
+.chapter-num { color: rgba(255,255,255,.6); }
+.site-footer { border-top-color: rgba(255,255,255,.16); }
+.footer-links a { color: #fff; }
+
+/* mint and amber are punctuation, never surfaces */
+.mark-yes { background: #93ffe4; }
+.mark-yes::before { border-color: var(--ground); }
+.mark-no { background: rgba(255,255,255,.22); }
+.accent-green { color: #93ffe4; }
+.accent-plum  { color: var(--color-ember-orange); }
+.demo-note { border-left-color: #ffac47; color: rgba(255,255,255,.72); }
+
+/* --- the white break sections: the contrast IS the layout ---------------- */
+.flow-band, .limits-band {
+  background: #fff;
+  color: #333;
+  /* lavender never goes on white — on light the poster colour is the plum */
+  --color-ember-orange: #23002b;
+  --color-graphite: #121212;
+  --color-muted: #555;
+  --color-hairline: #e5e5e5;
+  --color-fog: #f4f4f6;
+}
+.flow-band h1, .flow-band h2, .flow-band h3,
+.limits-band h1, .limits-band h2, .limits-band h3 { color: #121212; }
+.flow-band .lede, .limits-band .lede { color: #555; }
+.flow-band .limit, .limits-band .limit,
+.flow-band .mini-card, .limits-band .mini-card { background: #fff; border: 1px solid #e5e5e5; }
+.flow-band .chapter-num, .limits-band .chapter-num { color: #777; }
+.flow-band .accent-green, .limits-band .accent-green { color: #0f6f5a; }
+.flow-band .tag, .limits-band .tag { background: #f4f4f6; color: #333; }
+.flow-band .btn-filled, .limits-band .btn-filled { background: #23002b; color: #fff; }
+.flow-band .flow-label, .limits-band .flow-label { background: #f4f4f6; color: #333; }
+.flow-band .flow-label.is-out, .limits-band .flow-label.is-out { background: #23002b; color: #fff; }
+.flow-band .flow-label .flow-icon, .limits-band .flow-label .flow-icon { color: #23002b; }
+.flow-band .mark-yes, .limits-band .mark-yes { background: #0f6f5a; }
+.flow-band .mark-yes::before, .limits-band .mark-yes::before { border-color: #fff; }
+.flow-band .clip figcaption b, .limits-band .clip figcaption b { color: #121212; }
+.flow-band .clip figcaption span, .limits-band .clip figcaption span { color: #555; }

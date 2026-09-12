@@ -1,7 +1,7 @@
 # ВайбМІ — landing page
 
-Demo landing page for **ВайбМІ**, a Telegram Mini App built for the Silpo AI Factory
-hackathon. Plain static HTML/CSS — no build step, no dependencies.
+Demo landing page for **ВайбМІ**, a Telegram Mini App.
+Plain static HTML/CSS — no build step, no dependencies.
 
     index.html    the page
     styles.css    design tokens + layout
